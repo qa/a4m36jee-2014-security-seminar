@@ -21,6 +21,7 @@
             <url-pattern>/secured/*</url-pattern>
         </web-resource-collection>
         <auth-constraint>
+            <role-name>gooduser</role-name>
             <role-name>superuser</role-name>
         </auth-constraint>
     </security-constraint>

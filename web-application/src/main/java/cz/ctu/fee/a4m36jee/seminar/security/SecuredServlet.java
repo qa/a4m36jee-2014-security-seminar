@@ -24,7 +24,6 @@ package cz.ctu.fee.a4m36jee.seminar.security;
 import java.io.IOException;
 import java.io.Writer;
 
-import javax.annotation.security.DeclareRoles;
 import javax.ejb.EJB;
 import javax.ejb.EJBAccessException;
 import javax.servlet.ServletException;
@@ -42,8 +41,7 @@ import cz.ctu.fee.a4m36jee.seminar.security.ejb.TestBean;
  *
  * @author Peter Skopek
  */
-@ServletSecurity(@HttpConstraint(rolesAllowed = { "gooduser" }))
-@DeclareRoles("gooduser")
+@ServletSecurity(@HttpConstraint(rolesAllowed = { "gooduser", "superuser" }))
 @WebServlet(name = "SecuredServlet", urlPatterns = { "/secured/" }, loadOnStartup = 1)
 public class SecuredServlet extends HttpServlet {
 
