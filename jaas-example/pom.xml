@@ -23,6 +23,12 @@
                 <configuration>
                     <mainClass>sample.SampleAcn</mainClass>
                     <killAfter>-1</killAfter> <!-- prevent 'killAfter is now deprecated' warning -->
+                    <systemProperties>
+                        <systemProperty>
+                            <key>java.security.auth.login.config</key>
+                            <value>=sample_jaas.config</value>
+                        </systemProperty>
+                    </systemProperties>
                 </configuration>
             </plugin>
         </plugins>
